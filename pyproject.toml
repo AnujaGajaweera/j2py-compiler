@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "j2py-compiler"
+version = "0.1.0"
+description = "Compiler-grade Java-to-Python transpiler scaffold with semantic analysis and IR"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "OpenAI Codex"}]
+dependencies = []
+
+[project.scripts]
+j2py = "transpiler.cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["transpiler*"]
+
